@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-image: url('img/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #c0c0c0;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f3f3f3;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  font-size: 40px;
+}
+
+header .add{
+  display: none;
+}
+
+img{
+  max-width: 100%;
+  object-fit: contain;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out ;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.row{
+  display: flex;
+}
+
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* Navigation starts*/
+header{
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em;
+  padding: 1em 0;
+  height: 70px;
+}
+
+nav ul{
+  align-items: center;
+  gap: 4em;
+}
+
+nav a{
+  color: #38383D;
+  font-size: 18px;
+}
+
+nav a:hover{
+  color: #000;
+  font-weight: 500;
+}
+
+/* Navigation ends */
+
+/* Hero starts */
+section{
+  padding: 1em 0;
+  text-align: left;
+}
+
+section a:hover{
+  color: #000;
+  fill: #000;
+}
+
+.hero{
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 2em;
+  padding-top: 70px;
+}
+
+.space img{
+  width: 32px;
+  height: 42px;
+}
+
+.hero>*{
+  flex: 1 1 20em;
+}
+
+.hero .heading{
+  font-size: 36px;
+  font-weight: 600;
+  color: #27272A;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+
+.hero p{
+  font-weight: 400;
+  font-size: 20px;
+  color: #27272A;
+  margin: 0;
+}
+
+.hero-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  padding: 20px 15px;
+  margin-top: 20px;
+}
+
+.hero-btn:hover{
+  background-color: #27272A;
+}
+
+.hero-btn picture img{
+  width: 20px;
+  height: 20px;
+  margin: 0 0px 0 15px;
+}
+
+footer{
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}
+/* Hero ends */
+
+
+@media screen and (max-width: 1200px){
+  header .remove{
+    display: none;
+  }
+  header .add{
+    display: initial;
+  }
+  
+  .container{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+  }
+  .navigation.active ul{
+    flex-direction: column;
+    gap: 2em;
+    font-size: 0px;
+  }
+  .space img{
+    width: 25px;
+    height: auto;
+  }
+  .hero{
+    padding-top: 0;
+  }
+  .hero p{
+    font-size: 16px;
+  }
+  .hero-btn{
+    font-size: 16px;
+    font-weight: 500;
+    width: 170px;
+    height: 50px;
+    padding: 20px 10px;
+  }
+
+  footer{
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  /* styles only apply in light mode */
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #27272A;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #27272A;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #27272A;
+  }
+
+  body{
+  background-image: url('img/bglight.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+
+}
+nav a{
+  color: #EBEBF0;
+  font-size: 18px;
+}
+
+nav a:hover{
+  color: #ababab;
+  font-weight: 500;
+}
+.hero .heading{
+  color: #EBEBF0;
+
+}
+
+
+.hero p{
+  color: #c2c2c2;
+
+}
+
+.hero-btn{
+  background-color: #EBEBF0;
+  color: #000;
+}
+
+.hero-btn:hover{
+  background-color: #27272A;
+}
+footer{
+  color: #EBEBF0;
+
+}
+}
+
+
